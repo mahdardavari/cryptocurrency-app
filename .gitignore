@@ -1,0 +1,16 @@
+### NPM PACKAGES ###
+
+node_modules
+
+### NEXT.JS ###
+
+.next
+out
+
+### ENV FILES ###
+
+.env
+
+### NOTES ###
+
+notes.txt

@@ -15,9 +15,9 @@ const TopCryptos = ({ simplified }) => {
 
         const top10CurrentCryptos = cryptosList?.data?.coins;
 
-        const filteredData = top10CurrentCryptos.filter((coin) => coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
+        const filteredData = top10CurrentCryptos?.filter((coin) => coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
 
-        console.log(top10CurrentCryptos);
+        // console.log(top10CurrentCryptos);
 
         setCryptos(filteredData);
 

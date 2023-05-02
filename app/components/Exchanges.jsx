@@ -23,7 +23,7 @@ const Exchanges = () => {
                             visible={true}
                           />
 
-  console.log(exchangeData)
+  // console.log(exchangeData)
 
   return (
     <div className="ExchangesPanel">

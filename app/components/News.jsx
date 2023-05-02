@@ -30,7 +30,7 @@ const News = ({ simplified }) => {
                                     visible={true}
                                   />
 
-  console.log(cryptoNews);
+  // console.log(cryptoNews);
   
   return (
     <div className="NewsPanel">

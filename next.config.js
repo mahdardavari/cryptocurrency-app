@@ -11,7 +11,8 @@ const nextConfig = {
     },
     images: {
       unoptimized: false
-    }
+    },
+    defaultLocale: 'en-US',
   }
   
   module.exports = nextConfig

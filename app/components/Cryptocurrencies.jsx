@@ -35,7 +35,7 @@ const Cryptocurrencies = () => {
                     <span>Market Cap</span>
                     <span>Change</span>
                 </div>
-                { cryptoCurrencies.map((currency) => (
+                { cryptoCurrencies?.map((currency) => (
                     <div className="CryptocurrenciesRow" key={ currency.uuid }>
                         <div className="CryptoListSnapshot">
                             { currency.rank }

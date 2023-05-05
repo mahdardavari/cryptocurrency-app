@@ -11,7 +11,11 @@ const Dashboard = () => {
   const { data, isFetching } = useGetCryptosQuery(12),
     globalStats = data?.data?.stats;
 
-  const { t, lang } = useTranslation("common");
+  const { t, lang } = useTranslation("home");
+  {
+    console.log(lang);
+  }
+  console.log( t("client-only"))
 
   if (isFetching)
     return (
@@ -29,11 +33,10 @@ const Dashboard = () => {
         visible={true}
       />
     );
-
   return (
     <div className="Dashboard Content">
       <div className="DashboardHeading">
-        <h1>{t("title")}</h1>
+        {t("client-only")}
         <h2>Dashboard</h2>
         <div className="IconTray">
           <div className="CurrentStatus">

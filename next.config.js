@@ -1,8 +1,11 @@
-/** @type {import('next').NextConfig} */
-
+const withPlugins = require('next-compose-plugins');
+const nextTranslate = require('next-translate-plugin')
 const path = require('path');
 
-const nextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = withPlugins([
+  nextTranslate(),
+  {
     experimental: {
       appDir: true,
     },
@@ -14,5 +17,6 @@ const nextConfig = {
     },
     defaultLocale: 'en-US',
   }
-  
-  module.exports = nextConfig
+])
+
+module.exports = nextConfig;

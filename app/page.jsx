@@ -9,7 +9,6 @@ import "./styles/index.scss";
 export default function App() {
   return (
     <>
-      <Navbar />
       <Dashboard />
     </>
   );

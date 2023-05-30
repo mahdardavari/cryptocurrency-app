@@ -5,17 +5,10 @@ import { LineWave } from "react-loader-spinner";
 import { useGetCryptosQuery } from "../services/cryptoApi.js";
 import { IoMdNotifications } from "react-icons/io";
 import { TopCryptos } from "./index.js";
-import useTranslation from "next-translate/useTranslation";
 
 const Dashboard = () => {
   const { data, isFetching } = useGetCryptosQuery(12),
     globalStats = data?.data?.stats;
-
-  const { t, lang } = useTranslation("home");
-  {
-    console.log(lang);
-  }
-  console.log( t("client-only"))
 
   if (isFetching)
     return (
@@ -36,7 +29,7 @@ const Dashboard = () => {
   return (
     <div className="Dashboard Content">
       <div className="DashboardHeading">
-        {t("client-only")}
+        {/* {t("client-only")} */}
         <h2>Dashboard</h2>
         <div className="IconTray">
           <div className="CurrentStatus">

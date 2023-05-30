@@ -15,9 +15,9 @@ const TopCryptos = ({ simplified }) => {
 
         const top10CurrentCryptos = cryptosList?.data?.coins;
 
-        const filteredData = top10CurrentCryptos?.filter((coin) => coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
+        const filteredData = top10CurrentCryptos
+        ?.filter((coin) => coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
 
-        // console.log(top10CurrentCryptos);
 
         setCryptos(filteredData);
 
@@ -28,7 +28,8 @@ const TopCryptos = ({ simplified }) => {
             <div className="TopCryptosHeading">
                 <h2>Top 10 Current Cryptocurrencies</h2>
                 <div className="SearchCryptos">
-                    <input className="SearchCryptosInput" placeholder="Search for cryptocurrencies..." onChange={ (e) => setSearchTerm(e.target.value) } />
+                    <input className="SearchCryptosInput" placeholder="Search for cryptocurrencies..." 
+                    onChange={ (e) => setSearchTerm(e.target.value) } />
                 </div>
             </div>
             <div className="TopCryptosListContainer">
@@ -58,11 +59,6 @@ const TopCryptos = ({ simplified }) => {
                         <div className="CryptoChange">
                             <p>Change:</p>
                             <p>{ `${ millify(currency.change, { precision: 3 } ) } %` }</p>
-                            {/* {console.log((currency.change).slice(0, 1))} */}
-                            {/* { ((currency.change).slice(0, 1)) === '-' 
-                                ? document.getElementsByClassName('CryptoChange').style.color = "Red" 
-                                : document.getElementsByClassName('CryptoChange').style.color = "Green"
-                            } */}
                         </div>
                     </div>
                 ))}
